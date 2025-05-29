@@ -2,7 +2,7 @@
   remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*", "https://ext.same-assets.com/.*", "https://ugc.same-assets.com/.*"]
 
 [build]
-  command = "npm run build:netlify"
+  command = "npm run build"
   publish = "dist"
 
 [build.environment]
@@ -12,6 +12,7 @@
   DISABLE_ESLINT_PLUGIN = "true"
   CI = "true"
   NODE_ENV = "production"
+  SKIP_PREFLIGHT_CHECK = "true"
 
 [[redirects]]
   from = "/*"
