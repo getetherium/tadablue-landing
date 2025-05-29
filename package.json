@@ -4,16 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "npx vite --host 0.0.0.0",
     "prebuild": "npm run clean && npm run install-deps",
-    "build": "vite build --outDir dist",
-    "build:with-tsc": "npx tsc -b && vite build --outDir dist",
+    "build": "npx vite build --outDir dist",
+    "build:with-tsc": "npx tsc -b && npx vite build --outDir dist",
     "clean": "rm -rf node_modules/.vite && rm -rf dist",
     "install-deps": "npm ci --prefer-offline --no-audit",
     "build:netlify": "npm run clean && npm ci --prefer-offline --no-audit && npm run build",
     "lint": "npx biome lint --write && npx tsc --noEmit",
     "format": "npx biome format --write",
-    "preview": "vite preview"
+    "preview": "npx vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
